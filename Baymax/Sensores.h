@@ -9,14 +9,15 @@
 
 class Sensores:public Calibracao {
   private:
-    Refletancia refler;
+
   public:
-    bool viuObstaculo();
+    #define DIST_SONAR 10;
+    bool viuObs();
     
-    bool maisDir();
-    bool maisEsq();
-    bool dir();
-    bool esq();
+    bool maisDirBranco();
+    bool maisEsqBranco();
+    bool dirBranco();
+    bool esqBranco();
 
     bool bbbb();
     bool pppp();
@@ -43,4 +44,3 @@ class Sensores:public Calibracao {
   
 };
 #endif
-

@@ -13,12 +13,6 @@ void setup(){
 }
 
 void loop(){
-	/*Calibracao cali;
-
-  cali.tempo();
-  Serial.print("aeiou");
-  while(1); */
-
-  estra.seguirLinha();
+  estra.executar();
 
 }

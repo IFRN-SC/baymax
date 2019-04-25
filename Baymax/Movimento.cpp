@@ -11,3 +11,6 @@ void Movimento::motoresDir(){
 void Movimento::motoresEsq(){
   robo.acionarMotores(-30,30);
 }
+void Movimento::motoresTras(){
+  robo.acionarMotores(-30,-30);
+}
