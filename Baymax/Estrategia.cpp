@@ -1,29 +1,44 @@
 #include "Estrategia.h"
 
 void Estrategia::calibrar(){
-  c.tempo();
+  sensor.tempo();
 }
-void Estrategia::seguirLinha(){ //2 sensores
+void Estrategia::seguirLinha(){ 
    
-  if(sensor.bbbb()){ //bbbb
-     movi.motoresFrente();
-      
-  }else if(sensor.pppp()){ //pppp
-      movi.motoresFrente();    
-  
-  }else if(sensor.bbpp()){ //bbpp
-      movi.motoresDir();
-                
-  }else if(sensor.ppbb()){ //ppbb
-       movi.motoresEsq();
-       
-  }else if(sensor.bpbb()){
-      movi.motoresEsq();
-          
-  }else if(sensor.bbpb()){
-      movi.motoresDir();
-  }
-}     
+    if(sensor.bbbb()){ //bbbb
+       movi.motoresFrente();
+        
+    }else if(sensor.pppp()){ //pppp
+        movi.motoresFrente();    
+    
+    }else if(sensor.bbpp()){ //bbpp      
+          movi.motoresDir();              
+    
+    }else if(sensor.ppbb()){ //ppbb
+          movi.motoresEsq();
+    
+    }else if(sensor.bpbb()){    
+        movi.motoresEsq();
+            
+    }else if(sensor.bbpb()){
+        movi.motoresDir();
+        
+    }else if(sensor.bppb()){
+       movi.motoresDir();
+    
+    }else if(sensor.bppp()){
+        movi.motoresDir();
+        
+    }/*else if(sensor.pppb()){ //teste
+      while(!sensor.maisEsqBranco()){
+        movi.motoresEsq();
+      } 
+    }else if(sensor.bppp()){ //teste
+      while(!sensor.maisDirBranco()){
+        movi.motoresDir();
+      }*/
+    }
+//}     
 void Estrategia::desviarObs(){
     movi.motoresTras();
     delay(100);
@@ -43,7 +58,7 @@ void Estrategia::desviarObs(){
    
 }  
 void Estrategia::executar(){
-  if(sensor.viuObs()){
+ if(sensor.viuObs()){
     desviarObs();
   }else{
     seguirLinha();

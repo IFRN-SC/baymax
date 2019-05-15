@@ -3,11 +3,9 @@
 
 #include <robo_hardware2.h>
 
-#include "Refletancia.h"
-#include "Movimento.h"
 #include "Calibracao.h"
 
-class Sensores:public Calibracao {
+class Sensores: public Calibracao {
   private:
 
   public:

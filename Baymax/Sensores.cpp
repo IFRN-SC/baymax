@@ -11,8 +11,8 @@ bool Sensores::esqBranco(){return robo.lerSensorLinhaEsq() > esq.getCinza();}
 
 bool Sensores::bbbb(){return (maisEsqBranco()) && (esqBranco()) && (dirBranco()) && (maisDirBranco());}
 bool Sensores::pppp(){return (!maisEsqBranco()) && (!esqBranco()) && (!dirBranco()) && (!maisDirBranco());}
-bool Sensores::bbpp(){return (maisEsqBranco()) && (esqBranco()) && (!dirBranco()) && (!maisDirBranco());}
-bool Sensores::ppbb(){return (!maisEsqBranco()) && (!esqBranco()) && (dirBranco()) && (maisDirBranco());}
+bool Sensores::bbpp(){return (maisEsqBranco()) && (esqBranco()) && (!dirBranco()) && (!maisDirBranco());} //ESSE
+bool Sensores::ppbb(){return (!maisEsqBranco()) && (!esqBranco()) && (dirBranco()) && (maisDirBranco());} //ESSE
 
 bool Sensores::bpbb(){return (maisEsqBranco()) && (!esqBranco()) && (dirBranco()) && (maisDirBranco());}
 bool Sensores::bbpb(){return (maisEsqBranco()) && (esqBranco()) && (!dirBranco()) && (maisDirBranco());}
@@ -21,8 +21,8 @@ bool Sensores::pbbb(){return (!maisEsqBranco()) && (esqBranco()) && (dirBranco()
 
 bool Sensores::pbpp(){return (!maisEsqBranco()) && (esqBranco()) && (!dirBranco()) && (!maisDirBranco());}
 bool Sensores::ppbp(){return (!maisEsqBranco()) && (!esqBranco()) && (dirBranco()) && (!maisDirBranco());}
-bool Sensores::pppb(){return (!maisEsqBranco()) && (!esqBranco()) && (!dirBranco()) && (maisDirBranco());}
-bool Sensores::bppp(){return (maisEsqBranco()) && (!esqBranco()) && (!dirBranco()) && (!maisDirBranco());}
+bool Sensores::pppb(){return (!maisEsqBranco()) && (!esqBranco()) && (!dirBranco()) && (maisDirBranco());} //ESSE
+bool Sensores::bppp(){return (maisEsqBranco()) && (!esqBranco()) && (!dirBranco()) && (!maisDirBranco());} //ESSE
 
 bool Sensores::pbbp(){return (!maisEsqBranco()) && (esqBranco()) && (dirBranco()) && (!maisDirBranco());}
 bool Sensores::bppb(){return (maisEsqBranco()) && (!esqBranco()) && (!dirBranco()) && (maisDirBranco());}

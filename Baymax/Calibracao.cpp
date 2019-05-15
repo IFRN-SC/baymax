@@ -25,7 +25,7 @@ void Calibracao::tempo(){
   dir.setCinza(cali.refletanciaDir);
   maisDir.setCinza(cali.refletanciaMaisDir);
   esq.setCinza(cali.refletanciaEsq);
-  maisEsq.setCinza(cali.refletanciaDir);
+  maisEsq.setCinza(cali.refletanciaMaisEsq);
 
   
   Serial.print(maisEsq.getCinza());
@@ -35,7 +35,7 @@ void Calibracao::tempo(){
   Serial.print(dir.getCinza());
   Serial.print(F("\t --- \t"));
   Serial.print(maisDir.getCinza());
-   Serial.println(F(" Média"));
+  Serial.println(F(" Média"));
   
   
 }
@@ -99,8 +99,6 @@ void Calibracao::calibrarPreto(){
         pretoEsq = (pretoEsq + robo.lerSensorLinhaEsq())/2;
         pretoMaisDir = (pretoMaisDir + robo.lerSensorLinhaMaisDir())/2;
         pretoDir = (pretoDir + robo.lerSensorLinhaDir())/2;
-
-        delay(100);
 
     }
 
