@@ -39,8 +39,5 @@ class Calibracao{
     void limparTela();
   protected:
     Refletancia maisEsq, esq, maisDir, dir;
-
-
 };
-
 #endif 

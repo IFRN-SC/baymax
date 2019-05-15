@@ -64,7 +64,3 @@ void Estrategia::executar(){
     seguirLinha();
   }
 }
-  
-
- 
-     

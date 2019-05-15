@@ -17,8 +17,5 @@ class Refletancia {
     void setBranco(float branco);
     void setCinza(float preto, float branco);
     void setCinza(int cinza);
-
-    
-
 };
 #endif

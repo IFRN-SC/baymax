@@ -19,7 +19,7 @@ void Calibracao::tempo(){
 
      Serial.println(F("Acabou"));
   }
-
+  
   robo.lerCalibracao(cali);
 
   dir.setCinza(cali.refletanciaDir);
@@ -36,8 +36,6 @@ void Calibracao::tempo(){
   Serial.print(F("\t --- \t"));
   Serial.print(maisDir.getCinza());
   Serial.println(F(" Média"));
-  
-  
 }
 
 void Calibracao::calibrar(){
@@ -99,7 +97,6 @@ void Calibracao::calibrarPreto(){
         pretoEsq = (pretoEsq + robo.lerSensorLinhaEsq())/2;
         pretoMaisDir = (pretoMaisDir + robo.lerSensorLinhaMaisDir())/2;
         pretoDir = (pretoDir + robo.lerSensorLinhaDir())/2;
-
     }
 
     maisEsq.setPreto(pretoMaisEsq);
@@ -114,12 +111,8 @@ void Calibracao::calibrarPreto(){
     Serial.print(dir.getPreto());
     Serial.print(F("\t --- \t"));
     Serial.print(maisDir.getPreto());
-    Serial.println(F(" Preto"));
-    
-   
+    Serial.println(F(" Preto"));  
 }
-
-
 void Calibracao::calibrarBranco(){
     limparTela();
     
@@ -128,7 +121,6 @@ void Calibracao::calibrarBranco(){
     brancoMaisDir = robo.lerSensorLinhaMaisDir();
     brancoDir = robo.lerSensorLinhaDir();
 
-
     for(int i = 1; i <= 9; i++){
 
       brancoMaisEsq = (brancoMaisEsq + robo.lerSensorLinhaMaisEsq())/2;
@@ -136,9 +128,7 @@ void Calibracao::calibrarBranco(){
       brancoMaisDir = (brancoMaisDir + robo.lerSensorLinhaMaisDir())/2;
       brancoDir = (brancoDir + robo.lerSensorLinhaDir())/2;
 
-      delay(100);   
-
-    
+      delay(100);      
     }
     
     maisEsq.setBranco(brancoMaisEsq);
@@ -155,20 +145,17 @@ void Calibracao::calibrarBranco(){
     Serial.print(maisDir.getBranco());
     Serial.println(" Branco");
 }
-
 void Calibracao::valorCorte(){
     maisEsq.setCinza(maisEsq.getPreto(), maisEsq.getBranco());
     esq.setCinza(esq.getPreto(), esq.getBranco());
     maisDir.setCinza(maisDir.getPreto(), maisDir.getBranco());
     dir.setCinza(dir.getPreto(), dir.getBranco());
 }
-
 void Calibracao::mostrarValores(){
   float sensorMaisEsq = robo.lerSensorLinhaMaisEsq();
   float sensorEsq = robo.lerSensorLinhaEsq();
   float sensorMaisDir = robo.lerSensorLinhaMaisDir();
   float sensorDir = robo.lerSensorLinhaDir();
-
 
   Serial.print("Valor dos sensores: +esq:     esq:     dir:     +dir:");
   Serial.print(F("                     "));
@@ -180,9 +167,7 @@ void Calibracao::mostrarValores(){
   Serial.print(F("      "));
 
   delay(250);
-
 }
-
 void Calibracao::limparTela(){
   for(int i = 1; i <= 49; i++){
     Serial.println(F(""));

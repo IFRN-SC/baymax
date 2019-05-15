@@ -27,18 +27,14 @@ class Sensores: public Calibracao {
     bool bbbp();
     bool pbbb();
     
-    
     bool pbpp();
     bool ppbp();
     bool pppb();
     bool bppp();
-
-    
     
     bool pbbp();
     bool bppb();
     bool bpbp();
     bool pbpb();
-  
 };
 #endif

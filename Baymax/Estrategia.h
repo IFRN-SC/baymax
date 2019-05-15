@@ -7,9 +7,6 @@
 #include "Calibracao.h"
 #include "Sensores.h"
 
-
-
-
 class Estrategia {
   private:
     Movimento movi;
