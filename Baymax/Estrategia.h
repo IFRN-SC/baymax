@@ -16,6 +16,7 @@ class Estrategia {
     void seguirLinha(); 
     void calibrar();
     void desviarObs();
+    void redutor();
     void executar();  
 };
 #endif

@@ -10,5 +10,9 @@ class Movimento{
     void motoresDir();
     void motoresEsq();
     void motoresTras();
+    void motoresParem();
+    void superFrente();
+    void girarEsq();
+    void girarDir();
 };
 #endif

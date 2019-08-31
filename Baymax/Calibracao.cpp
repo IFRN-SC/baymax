@@ -9,12 +9,12 @@ void Calibracao::tempo(){
   while(!Serial.available()){
     delay(10);
     contadorWhile += 10;
-    if (contadorWhile >= 5000) { break; };
+    if (contadorWhile >= 3500) { break;};
   }
 
   resposta = Serial.read();
 
-  if(resposta == 'C'){
+  if(resposta == 'C' || resposta == 'c'){
       calibrar();
 
      Serial.println(F("Acabou"));
@@ -44,7 +44,7 @@ void Calibracao::calibrar(){
     
     limparTela();
 
-    while(resposta != 'S'){
+    while(resposta != 'S' || resposta != 's'){
     
             Serial.println(F("Vc quer ter os valores do preto ou do branco? P/B"));
             Serial.println(F("Pressione S para sair"));
@@ -111,7 +111,7 @@ void Calibracao::calibrarPreto(){
     Serial.print(dir.getPreto());
     Serial.print(F("\t --- \t"));
     Serial.print(maisDir.getPreto());
-    Serial.println(F(" Preto"));  
+    Serial.println(F(" Preto"));
 }
 void Calibracao::calibrarBranco(){
     limparTela();

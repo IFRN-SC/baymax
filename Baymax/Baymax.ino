@@ -1,4 +1,4 @@
-#include <robo_hardware2.h>
+#include <robo_hardware2.h> //refletancia_interferencia
 #include "Refletancia.h"
 #include "Movimento.h"
 #include "Estrategia.h"
@@ -6,12 +6,13 @@
 
 Estrategia estra;
 
-void setup(){
-	Serial.begin(9600);
-	robo.configurar(false);
+void setup() {
+  Serial.begin(9600);
+  robo.configurar(false);
   estra.calibrar();
+  pinMode(28, INPUT_PULLUP);
 }
 
-void loop(){
+void loop() {
   estra.executar();
 }
