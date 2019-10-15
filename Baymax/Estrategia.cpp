@@ -51,11 +51,16 @@ void Estrategia::seguirLinha(){
        }
     }
 }     
-/*void Estrategia::desviarObs(){ //ajeitar delays
-  movi.girarDir();
-  delay(50);
+void Estrategia::desviarObs(){ //ajeitar delays
+  movi.motoresParem();
+  delay(5000);
+  robo.ligarLed(3);
+  delay(2000);
+  
+ /* movi.girarDir();
+  delay(350);
   movi.motoresParem(); 
-  while(!sensor.pppp() || !sensor.pppb()){
+  while(!sensor.pppp()){
     movi.motoresTras();
  }
   movi.motoresParem();
@@ -78,9 +83,9 @@ void Estrategia::seguirLinha(){
   movi.motoresDir();
   delay(300);
   movi.motoresTras();
-  delay(90);
-   
+  delay(90);  
 }*/
+}
 void Estrategia::redutor(){
    robo.ligarLed(1);
 
@@ -108,6 +113,9 @@ void Estrategia::executar(){
  if(sensor.viuObs()){
     desviarObs();
   }else if(digitalRead(28) == LOW){
+      /*if(digitalRead(28) == LOW){
+        redutor();
+      }*/
     redutor();
   }else{  
     seguirLinha();
