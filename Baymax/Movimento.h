@@ -14,5 +14,7 @@ class Movimento{
     void superFrente();
     void girarEsq();
     void girarDir();
+    void girarDir90();
+    void girarEsq90();
 };
 #endif

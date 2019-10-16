@@ -9,7 +9,7 @@ class Sensores: public Calibracao {
   private:
 
   public:
-    #define DIST_SONAR 10;
+    #define DIST_SONAR 7;
     bool viuObs();
     
     bool maisDirBranco();
